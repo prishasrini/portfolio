@@ -53,7 +53,7 @@ export type Project = {
 };
 
 // Empty links are hidden automatically. Fill these in once deployed.
-const CLEARDOCS_WEBSITE = ""; // e.g. https://cleardocs.vercel.app
+const CLEARDOCS_WEBSITE = "https://cleardocs-beta.vercel.app";
 const CLEARDOCS_APP = ""; // APK link or demo video
 
 export const projects: Project[] = [
@@ -114,7 +114,10 @@ export const projects: Project[] = [
       "Deployed on Vercel",
     ],
     stack: ["Next.js", "React", "TypeScript", "Vercel"],
-    links: [{ label: "Live site", href: "https://sp-builders-website.vercel.app" }],
+    links: [
+      { label: "Live site", href: "https://sp-builders-website.vercel.app" },
+      { label: "GitHub", href: "https://github.com/prishasrini/SP-BUILDERS-WEBSITE" },
+    ],
     shots: [], // add screenshots to public/work/ and list them here
     color: "#f2b632",
     ink: "#1a1406",

@@ -170,17 +170,18 @@ export default function Intro() {
   const radius = (cardW * ringShots.length) / (2 * Math.PI) + 40;
 
   return (
-    <section ref={section} id="top" className="relative h-[560vh]" aria-label="Introduction" data-cursor="Scroll">
+    <section ref={section} id="top" className="relative h-[560vh]" aria-label="Introduction">
       <div ref={stage} className="sticky top-0 h-[100svh] overflow-hidden">
         {/* ---------- Scene 2: red (sits behind the black cut-out) ---------- */}
         <div ref={redScene} className="absolute inset-0 flex flex-col justify-center bg-red px-5 sm:px-10">
-          <div ref={redContent} className="flex items-start gap-4 sm:gap-8" style={{ opacity: 0 }}>
-            <p className="mt-[2vw] shrink-0 font-serif text-[7vw] italic leading-none sm:text-[4.5vw]">I build</p>
-            {/* Window that shows one word at a time */}
-            <div className="h-[16vw] overflow-hidden sm:h-[15vw]">
+          <div ref={redContent} style={{ opacity: 0 }}>
+            <p className="font-serif text-[9vw] italic leading-none sm:text-[5vw]">I build</p>
+            {/* Window that shows one word at a time. Sizes are in em so the window always matches one line,
+                and the words never wrap, so a long one like "real products" can't spill over the next. */}
+            <div className="mt-[1vw] h-[0.9em] overflow-hidden whitespace-nowrap text-[14vw] leading-[0.9em]">
               <div ref={words}>
                 {profile.builds.map((w) => (
-                  <p key={w} className="font-mega h-[16vw] text-[16vw] sm:h-[15vw] sm:text-[15vw]">
+                  <p key={w} className="font-mega h-[0.9em] leading-[0.9em]">
                     {w}
                   </p>
                 ))}

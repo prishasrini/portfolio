@@ -139,7 +139,11 @@ html.has-cursor * {
   width: 40px;
   height: 40px;
   border: 1.5px solid var(--color-cream);
-  mix-blend-mode: difference;
+  /* A faint dark outline keeps the cream ring visible on cream panels too (no colour blending,
+     which turned it teal on the red sections) */
+  box-shadow:
+    0 0 0 1px rgb(11 11 12 / 0.35),
+    inset 0 0 0 1px rgb(11 11 12 / 0.25);
   transition:
     width 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
     height 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
@@ -172,10 +176,12 @@ html.has-cursor * {
   height: 36px;
   border-radius: 2px;
   background: var(--color-cream);
+  box-shadow: 0 0 0 1px rgb(11 11 12 / 0.35);
 }
 /* Hidden while a section draws its own cursor (X-ray lens, liquid) */
 .cursor-ring[data-mode="hidden"] {
   width: 10px;
   height: 10px;
   border-color: transparent;
+  box-shadow: none;
 }

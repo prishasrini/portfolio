@@ -135,7 +135,7 @@ export default function Cursor() {
       <div
         ref={dot}
         aria-hidden
-        className="pointer-events-none fixed left-0 top-0 z-[101] h-1.5 w-1.5 rounded-full bg-red opacity-0"
+        className="pointer-events-none fixed left-0 top-0 z-[101] h-2 w-2 rounded-full border border-cream bg-red opacity-0"
       />
     </>
   );

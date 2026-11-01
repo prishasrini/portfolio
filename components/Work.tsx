@@ -133,7 +133,7 @@ function Panel({
       </div>
 
       {/* Visual side */}
-      <div className="relative flex-1 lg:h-full" data-cursor="Keep scrolling">
+      <div className="relative flex-1 lg:h-full" data-cursor="Scroll">
         {p.shots.length > 0 ? <Shots project={p} /> : <Building ink={p.ink} />}
       </div>
     </article>
