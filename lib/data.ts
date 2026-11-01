@@ -54,7 +54,8 @@ export type Project = {
 
 // Empty links are hidden automatically. Fill these in once deployed.
 const CLEARDOCS_WEBSITE = "https://cleardocs-beta.vercel.app";
-const CLEARDOCS_APP = ""; // APK link or demo video
+const CLEARDOCS_APP = "https://expo.dev/accounts/prishasrini/projects/cleardocs/builds/861c185d-9c66-459f-9444-fec9ae027d6b";
+const CLEARDOCS_VIDEO = "https://drive.google.com/drive/folders/1-VCaKoxKbOdlYGzTDnjlSuDQsHxSWVes";
 
 export const projects: Project[] = [
   {
@@ -74,6 +75,8 @@ export const projects: Project[] = [
       { label: "GitHub", href: "https://github.com/prishasrini/cleardocs" },
       { label: "Live site", href: CLEARDOCS_WEBSITE },
       { label: "Android app", href: CLEARDOCS_APP },
+      { label: "App demo", href: CLEARDOCS_VIDEO },
+      { label: "WordPress site", href: "https://cleardocsguides.wordpress.com" },
     ],
     shots: ["/work/cd-home.webp", "/work/cd-services.webp", "/work/cd-blog.webp"],
     phone: "/work/cd-mobile.webp",
